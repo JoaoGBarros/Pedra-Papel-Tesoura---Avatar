@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type='text/css' href='Css2.css' />
+	<script type="text/javascript">
+
+  var comp,result, nj, nc, j;
+  var p = 0,
+      c = 0;
+
+
+  window.onload =function (){
+  a.onclick = function(){
+    j=1;
+    compara();
+  }
+  b.onclick = function(){
+    j=2;
+    compara();
+  }
+  e.onclick = function(){
+    j=3;
+    compara();
+  }
+  d.onclick = function(){
+    j=4;
+    compara();
+
+  }
+} 
+
+function compara(){
+
+ comp = Math.floor(Math.random() * 4);
+
+   if(comp == 0){
+     nc = "Agua"
+   }else if(comp == 1){
+     nc = "Terra"
+   }else if(comp == 2){
+     nc = "Fogo"
+    }else if(comp == 3){
+      nc = "Ar"
+    }
+
+    if(j == 1){
+     nj = "Agua"
+   }else if(j == 2){
+     nj = "Terra"
+   }else if(j == 3){
+     nj = "Fogo"
+    }else if(j == 4){
+      nj = "Ar"
+    }
+
+
+
+    if(comp==j){
+      result = 0;
+    }
+
+
+    if((comp==0)&&(j==4)){
+      result = 0;
+    }else if((comp == 3)&&(j == 1)){
+      result = 0;
+    }else if((comp == 1)&&(j == 3)){
+      result = 0;
+    }else if((comp == 2)&&(j == 2)){
+      result = 0;
+    }
+
+
+    if((comp == 3)&&(j == 3)){
+      result = 1;
+    }else if((comp == 2)&&(j == 1)){
+      result = 1;
+    }else if((comp == 1)&&(j == 4)){
+      result = 1;
+    }else if((comp == 0)&&(j ==2)){
+      result = 1;
+    }
+
+
+     if((comp == 2)&&(j == 4)){
+     result = 2;
+    }else if((comp == 0)&&(j == 3)){
+     result = 2;
+    }else if((comp == 3)&&(j == 2)){
+     result = 2;
+    }else if((comp == 1)&&(j ==1)){ 
+      result = 2;
+    }
+
+    if (result == 0) {
+      document.f1.TT.value = nj+" contra "+nc+" : Empate!"; 
+    }
+    if (result == 1) {
+      document.f1.TT.value= nj+" contra "+nc+" : Vitória!";
+      p++;
+    }
+    if (result == 2) {
+      document.f1.TT.value= nj+" contra "+nc+" : Derrota!";
+      c++;
+    }
+    document.f1.TM.value = p;
+    document.f1.HM.value = c;
+}
+
+    
+</script>
+</head>
+<body>
+<div class='principal'>
+   <div class='cabeçalho'>
+    <div class='logo-cabeçalho'>
+    <h1><b>A Guerra dos 100 anos</b></h1>
+  </div>
+</div>
+</div>
+  
+  <div class='corpo'>
+    <table border='0' cellpadding="0" cellspacing="0" width='475' align="center"><tr><td width='468' align="center"><form name='f1'><p align="center">
+    <img src='https://vignette.wikia.nocookie.net/avatar/images/5/50/Waterbending_emblem.png/revision/latest/scale-to-width-down/150?cb=20130729182922'>
+    <img src='https://vignette.wikia.nocookie.net/avatar/images/e/e4/Earthbending_emblem.png/revision/latest/scale-to-width-down/150?cb=20130729200732'><br>
+    <img src='https://vignette.wikia.nocookie.net/avatar/images/4/4b/Firebending_emblem.png/revision/latest/scale-to-width-down/150?cb=20130729203233'>
+    <img src='https://vignette.wikia.nocookie.net/avatar/images/8/82/Airbending_emblem.png/revision/latest/scale-to-width-down/150?cb=20130729210446'><br></p></td></tr></table></div>
+    <table border="0" cellpadding="0" cellspacing="0" width="475" align="center" >
+<tr><td width="468"><form name="f1" ><p align="center">
+<input type="button" name="Agua" id="a" value="Agua">
+<input type="button" name="Terra" id="b" value="Terra">
+<input type="button" name="Fogo" id="e" value="Fogo">
+<input type="button" name="Ar" id="d" value="Ar">
+<br>
+<br>
+<input size="41" name="TT" readonly></p></td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="445" align="center">
+<tr><td width="218" align="right">Jogador:</td><td width="223">
+<input size="7" name="TM" class="first_field" readonly>
+<tr><td width="218" align="right">Computador:</font></td>
+<td width="223"><input size="7" name="HM" readonly></td></tr></td></tr></table>
+<embed src="Abertura Avatar.mp3" hidden="true" loop="infinite" autostart="TRUE">
+</body>
+</html>
+
+</body>
+</html>

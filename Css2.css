@@ -1,0 +1,47 @@
+body,
+html{
+ margin:  0; 
+ padding: 0;
+ font-size:18px;
+}
+body{
+ background:#ccc url(https://lh3.googleusercontent.com/4vASTcvWi0tPAOo6QEztvvMLpkiPk6uwq1-ygdnc-YGO3aJdQfPoYBNxyuGKoRZ3Ytk37CoZZ4pz9p59nrw=h1264) center top no-repeat;
+ background-size:100%;
+ background-attachment:fixed;
+}
+
+.principal{
+ width: 960px;
+ color: #000;
+ margin: 0 auto;
+ font-family:sans-serif;
+}
+.cabeçalho, 
+.logo, 
+.rodapé,
+.menu{
+ width:100%;
+ display:block;
+ clear:both;
+}
+.cabeçalho{
+ height:100px;
+}
+.logo-cabeçalho{
+ float:left;
+}
+.logo-cabeçalho a{
+ font-size:50px;
+ font-style:italic;
+ text-decoration:none;
+ color:#000;
+ display:block;
+ padding:20px 0 0 0;
+}
+.corpo{
+ position:relative;
+ overflow:hidden;
+}
+.Espaçamento{
+ padding:20px;
+}
